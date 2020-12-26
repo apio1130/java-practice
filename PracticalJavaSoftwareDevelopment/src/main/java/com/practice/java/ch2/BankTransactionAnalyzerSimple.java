@@ -8,12 +8,12 @@ import java.util.List;
 
 public class BankTransactionAnalyzerSimple {
 
-    private static final String RESOURCES = "src/main/resources/";
+    private static final String PROJECT_NAME = "PracticalJavaSoftwareDevelopment";
+    private static final String RESOURCES = "/src/main/resources/";
 
     public static void main(String[] args) throws IOException {
-        final String projectName = "PracticalJavaSoftwareDevelopment";
         final String finalName = "bank-data-simple.csv";
-        final Path path = Paths.get(projectName,"src", "main", "resources", finalName);
+        final Path path = Paths.get(PROJECT_NAME + RESOURCES + finalName);
         final List<String> lines = Files.readAllLines(path);
         double total = 0d;
         for (final String line : lines) {
